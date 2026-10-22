@@ -1,0 +1,7 @@
+{
+  "name": "Tissot Watches and Co.",
+  "description": "Official showcase and timepiece collection for Tissot Watches and Co., featuring Swiss precision timepieces, brand heritage, know-how technology, and contact support.",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

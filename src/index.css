@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #CCCCCC;
+    color: #0b0a0c;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.font-serif-luxury {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+.font-heading {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-sans-ui {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom background pattern reminiscent of bg.jpg */
+.tissot-bg-texture {
+  background-color: #e0dddd;
+  background-image: url('/bg.jpg');
+  background-repeat: repeat;
+}
+
+.tissot-header-bg {
+  background-color: rgb(175, 170, 170);
+  background-image: url('/lg.jpg');
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Original navigation button border styling */
+.tissot-nav-btn {
+  border: 3px #CCCCCC outset;
+  transition: all 0.2s ease-in-out;
+}
+
+.tissot-nav-btn:hover,
+.tissot-nav-btn.active {
+  color: rgb(136, 14, 14);
+  border: 3px rgb(129, 7, 7) inset;
+  background-color: #e5e5e5;
+}
