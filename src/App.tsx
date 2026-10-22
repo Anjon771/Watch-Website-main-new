@@ -91,7 +91,13 @@ export const App: React.FC = () => {
   const totalCartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
-    <div className="min-h-screen bg-[#CCCCCC] flex flex-col items-center">
+    <div 
+      className="min-h-screen bg-[#CCCCCC] flex flex-col items-center"
+      style={{
+        backgroundImage: "url('/bg.jpg')",
+        backgroundRepeat: 'repeat',
+      }}
+    >
       {/* Outer Wrapper matching original #wrapper styling */}
       <div
         id="wrapper"

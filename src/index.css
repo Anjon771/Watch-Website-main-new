@@ -3,6 +3,8 @@
 @layer base {
   body {
     background-color: #CCCCCC;
+    background-image: url('/bg.jpg');
+    background-repeat: repeat;
     color: #0b0a0c;
     font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
     margin: 0;

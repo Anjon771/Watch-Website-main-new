@@ -24,6 +24,10 @@ import { WATCHES, Watch } from '../data/watches';
 import { WatchComparator } from '../components/WatchComparator';
 import { TollFreeBanner } from '../components/TollFreeBanner';
 
+// Local high-fidelity horology imagery
+import heroSwissAtelierImg from '../assets/images/hero_swiss_atelier_1792672479238.jpg';
+import craftsmanshipCalibreImg from '../assets/images/craftsmanship_calibre_1792672499544.jpg';
+
 interface LandingPageProps {
   onSelectWatch: (watch: Watch) => void;
   onBuyDirect: (watch: Watch) => void;
@@ -131,13 +135,16 @@ export const LandingPage: React.FC<LandingPageProps> = ({
         <div className="relative min-h-[640px] lg:min-h-[720px] flex items-center">
           {/* Hero background image */}
           <img
-            src="/src/assets/images/hero_swiss_atelier_1792672479238.jpg"
+            src={heroSwissAtelierImg}
             alt="Tissot Swiss Watchmaking Atelier in Le Locle"
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full object-cover object-center z-0"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = '/hero_swiss_atelier_1792672479238.jpg';
+            }}
           />
 
-          {/* Measured Scrim for WCAG AA readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/45" />
+          {/* Measured Scrim allowing the Swiss atelier & snowy Alps backdrop to shine through */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/30 z-1" />
 
           {/* Hero Content */}
           <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-10 py-16 lg:py-24 text-white">
@@ -485,9 +492,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
             <div className="h-full min-h-[320px] bg-neutral-900 flex items-center justify-center overflow-hidden">
               <img
-                src="/src/assets/images/craftsmanship_calibre_1792672499544.jpg"
+                src={craftsmanshipCalibreImg}
                 alt="Swiss Calibre Movement with Oscillating Rotor"
                 className="w-full h-full object-cover max-h-[460px] hover:scale-105 transition-transform duration-500"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = '/craftsmanship_calibre_1792672499544.jpg';
+                }}
               />
             </div>
           </div>
